@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Trend for {{loguser.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="" *ngFor="let BMIS of BMI">
+
+ <ion-list>
+   <ion-label color="primary">BMI Measured {{BMIS.created_at}}</ion-label>
+   <ion-item>BMI Value: {{BMIS.BMI}}</ion-item>
+   <ion-item>Your Height: {{BMIS.height}}</ion-item>
+   <ion-item>Your Weight: {{BMIS.weight}}</ion-item>
+   <ion-item>Obesity Level: {{BMIS.obesity_level}}</ion-item><br>
+ </ion-list>
+
+</div>
+</ion-content>

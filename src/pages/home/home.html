@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title align="center">Electronic BMI Calculator</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h2>Welcome to Measure Your BMI Electronically</h2>
+    <hr><ion-label color="secondary">HOW IT WORKS</ion-label>
+    <p justified>To start using this system you have to register in this Application.
+    After create an account you can login to this application, then to Measure your
+  BMI click measure button and make sure you phone bluetooth is on. To view your BMI trends click
+view trend button. Before you click measure button make sure you stand on the weight measuring device
+and the adjustable height stick is adjusted according to your height.</p>
+<ion-row>
+  <ion-col col-5><button ion-button color="back" (click)="login()">LOGIN</button></ion-col>
+  <ion-col col-5><button ion-button color="back" (click)="register()">REGISTER</button></ion-col>
+</ion-row>
+</ion-content>
