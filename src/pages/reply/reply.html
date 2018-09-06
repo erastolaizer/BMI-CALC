@@ -1,0 +1,38 @@
+<!--
+  Generated template for the ReplyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>JIBU</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-label color="primary">SWALI</ion-label>
+    <p>{{question}}</p>
+    <form [formGroup]="answer" (ngSubmit)="Answer()">
+        <ion-list>
+  
+            <ion-item>
+              <ion-label stacked><h2>Andika jibu</h2></ion-label>
+              <ion-textarea type="text" formControlName="answer"></ion-textarea> 
+             </ion-item>
+        </ion-list>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-4> <button ion-button color="secondary" type="submit" [disabled]="!answer.valid"> jibu</button></ion-col>
+           </ion-row>
+            </ion-grid>
+          </form><br>
+    <ion-label COLOR="danger">MAJIBU YAKO</ion-label>
+    <ion-list *ngFor="let answer of answers">
+      <p>{{answer.answer}}</p><hr>
+    </ion-list>
+    
+</ion-content>

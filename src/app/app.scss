@@ -14,12 +14,25 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
-.app1{
-  background-color:#8B9FB1;
+.alert {
+color:  #8B9FB1;
+text-align: center;
 }
+.cancer{
+ //background-color: #f4f4f4;
+  text-align: justify;
+
+}
+.menu{
+  background-color: #f0f4f8;
+   text-align: justify;
+
+ }
 ion-icon{
-  color: #32db64;
+  color: #70803a;
+}
+ion-content {
+//  background-image: url('../assets/image/back.jpeg') ;
 }
 .dropdown {
     position: relative;

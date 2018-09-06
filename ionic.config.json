@@ -1,8 +1,7 @@
 {
-  "name": "obesity",
-  "app_id": "",
-  "type": "ionic-angular",
+  "name": "Saratani",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular"
 }

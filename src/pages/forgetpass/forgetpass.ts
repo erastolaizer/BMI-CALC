@@ -15,7 +15,7 @@ export class ForgetpassPage {
   constructor(public http : Http, private formBuilder: FormBuilder, public navCtrl: NavController, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {
     this.forgetp = this.formBuilder.group({
     name: ['', Validators.required],
-    username: ['', Validators.required],
+    phone_number: ['', Validators.required],
     password: ['', Validators.required],
     repeat_pass: ['', Validators.required],
   });
@@ -25,16 +25,16 @@ export class ForgetpassPage {
       {
          let
              name  : string   = this.forgetp.controls["name"].value,
-             username    : string    = this.forgetp.controls["username"].value,
+             phone_number    : string    = this.forgetp.controls["phone_number"].value,
              password     : string    = this.forgetp.controls["password"].value,
              repeat_pass     : string    = this.forgetp.controls["repeat_pass"].value;
              this.showLoader();
 
              if (password === repeat_pass){
-               let     headers  : any      = new Headers({ 'X-Requested-With': 'XMLHttpRequest'}),
-                       options  : any      = new RequestOptions({ headers: headers }),
-                       url      : any       = 'http://192.168.43.224:8000/api/user/forgetPass',
-                       body    : any        = {name:name,username:username,password:password};
+              let headers   : any      = new Headers({ 'X-Requested-With': 'XMLHttpRequest'}),
+              options  : any      = new RequestOptions({ headers: headers }),
+                       url      : any       = 'http://saratani.dreamgeeks.tech/api/user/forgetPass',
+                       body    : any        = {name:name,phone_number:phone_number,password:password};
 
                        this.http.post(url,body,options).map(res =>res.json())
                        .subscribe(
@@ -51,7 +51,7 @@ export class ForgetpassPage {
                           this.sendNotification("Full name Invalid, please register");
                         }
                         else if (error.status === 401) {
-                          this.sendNotification("Invalid username, please enter details correctly");
+                          this.sendNotification("Invalid phone_number, please enter details correctly");
                         }
                         else {
                          this.sendNotification("Server is temporary not responding!!");

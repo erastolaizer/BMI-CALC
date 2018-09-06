@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { LoginPage } from '../login/login';
-import { RegisterPage } from '../register/register';
+import { UbongoPage } from '../ubongo/ubongo';
+import { LiverPage } from '../liver/liver';
+import { BreastsPage } from '../breasts/breasts';
 
 @Component({
   selector: 'page-home',
@@ -12,10 +13,13 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-login(){
-  this.navCtrl.push(LoginPage);
-}
-register(){
-  this.navCtrl.push(RegisterPage);
-}
+  ubongo(){
+    this.navCtrl.push(UbongoPage);
+  }
+  ini(){
+    this.navCtrl.push(LiverPage);
+  }
+  matiti(){
+    this.navCtrl.push(BreastsPage);
+  }
 }
